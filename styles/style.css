@@ -242,7 +242,6 @@
   margin-block-start: 52px;
   margin-block-end: 100px;
   margin-inline: 35px;
-  block-size: 84px;
   inline-size: 306px;
   border: 2px solid var(--main-border-color);
   background-color: var(--background-color);
@@ -253,6 +252,7 @@
 .button__icon {
   width: 28px;
   height: 28px;
+  margin-block-start: 15px;
 }
 
 .button__icon use {
@@ -264,6 +264,8 @@
   font-family: var(--font-accent);
   font-size: 14px;
   text-align: left;
+  padding-block-start: 8px;
+  margin-block-end: 15px;
 }
 
 .dialog::backdrop {
@@ -409,7 +411,8 @@
   }
   
   .button__save-text {
-    padding-block: 18.5px;
+    margin-block-end: 18.5px;
+    margin-block-start: 18.5px;
     margin-inline-start: 8px;
   }
 
