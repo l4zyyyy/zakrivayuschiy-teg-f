@@ -411,9 +411,10 @@
   }
   
   .button__save-text {
-    margin-block-end: 18.5px;
     margin-block-start: 18.5px;
+    align-self: center;
     margin-inline-start: 8px;
+    padding: 0;
   }
 
   .dialog {
