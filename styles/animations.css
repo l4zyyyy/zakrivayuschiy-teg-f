@@ -16,7 +16,6 @@
 .core {
   fill: none;
   transition: fill 0.3s;
-  transition-delay: 0s;
 }
 
 .sparks {
@@ -24,25 +23,36 @@
   fill: var(--animation-fill-color);
 }
 
+.like-icon .core {
+  transition: fill 0.3s ease;
+  fill: transparent;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s ease 0s;
+  fill: transparent;
+}
+
 .like-icon-button:hover .core {
-  fill: var(--contour-color);
   transition-delay: 0s;
+  fill: currentColor;
 }
 
 .like-icon-button:hover .main-body {
-  fill: var(--contour-color);
   transition-delay: 0.05s;
+  fill: currentColor;
 }
 
 .like-icon-button:not(:hover) .core {
-  fill: none;
   transition-delay: 0.03s;
+  fill: transparent;
 }
 
 .like-icon-button:not(:hover) .main-body {
-  fill: none;
   transition-delay: 0s;
+  fill: transparent;
 }
+
 .like-icon-button:active .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3s;

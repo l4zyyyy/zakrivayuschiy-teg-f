@@ -28,9 +28,10 @@
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
-  margin-block-start: clamp(60px, 10vh, 100px);
+  margin-block-start: clamp(60px, 100vh, 100px);
   inline-size: clamp(375px, 90vw, 700px);
   margin-inline: auto;
+  block-size: 327px;
   border: 2px solid var(--main-border-color);
 }
 
@@ -42,34 +43,40 @@
 
 .header__title {
   justify-self: center;
-  font-size: clamp(32px, 4vw, 49px);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__subtitle {
   justify-self: center;
-  font-size: clamp(10px, 1.5vw, 14px);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);;
   margin-block-start: clamp(10px, 3vh, 20px);
   text-transform: uppercase;
 }
 
 .main {
+  justify-content: center;
+  align-items: center;
   inline-size: clamp(375px, 90vw, 696px);
   margin-inline: auto;
-  margin-block-start: clamp(60px, 10vh, 100px);
+  margin-block-start: 100px;
 }
 
 .section__post {
-  margin-block-start: clamp(30px, 8vh, 50px);
+  margin-block-start: 50px;
   background-color: var(--background-color);
+}
+
+.section__post:first-of-type {
+  margin-block-start: 0;
 }
 
 .title__post {
   border: 2px solid var(--main-border-color);
-  padding-inline: clamp(8px, 2vw, 10px);
+  padding-inline: 10px;
   padding-block-start: clamp(2px, 1vw, 4px);
   padding-block-end: clamp(4px, 1.5vw, 6px);
-  font-family: "Inter-Variable", sans-serif;
-  font-size: clamp(16px, 2vw, 18px);
+  font-family: var(--font-main);
+  font-size: 18px;
   font-variation-settings: 'wght' 700;
   line-height: clamp(20px, 2.5vw, 21px);
   text-align: left;
@@ -115,14 +122,14 @@
 
 .label {
   position: absolute;
-  top: clamp(15px, 4vh, 25px);
-  right: clamp(8px, 3vw, 13px);
+  top: 25px;
+  right: 13px;
   z-index: 1;
   opacity: 50%;
   mix-blend-mode: hard-light;
   color: var(--label-color, #000);
-  font-family: var(--font-accent, "Inter-Variable");
-  font-size: clamp(10px, 1.2vw, 14px);
+  font-family: var(--font-accent);
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -147,43 +154,40 @@
 
 .post__content {
   border: 2px solid var(--main-border-color);
-  border-top: none;
 }
 
 .content {
   display: grid;
-  margin-inline: auto;
-  padding-block: clamp(20px, 5vh, 25px);
-  inline-size: clamp(321px, 85vw, 646px);
+  padding-block: 25px;
+  inline-size: 646px;
   max-inline-size: 100%;
 }
 
 .paragraph__content {
-  font-variation-settings: 'wght' var(--card-paragraph-weight);
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: 18px;
   line-height: 21px;
+  padding-inline: 15px;
 }
 
-.content p:nth-of-type(2) {
-  margin-block-start: clamp(20px, 5vh, 27px);
+.comments {
+  margin-block-start: 27px;
 }
 
 .card__like-button {
   all: unset;
   display: flex;
   align-items: center;
-  gap: clamp(10px, 4vw, 15px);
+  gap: 12px;
   cursor: pointer;
-  padding: 0;
-  justify-self: end;
-  margin-block-start: clamp(20px, 4vh, 25px);
+  margin-block-start: 25px;
+  justify-content: end;
   border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  transition: border 0.3s ease;
+  padding-inline-end: 25px;
 }
 
 .like-icon-button {
   border: 2px solid transparent;
-  transition: border-color 0.3s ease;
 }
 
 .card__like-button:focus {
@@ -192,6 +196,7 @@
 
 .card__like-button:focus-visible .like-icon-button {
   border-color: var(--main-border-color);
+  transition: border 0.3s ease;
 }
 
 .button__like {
@@ -199,6 +204,10 @@
   min-block-size: 38px;
   min-inline-size: 130px;
   display: flex;
+}
+
+.card__like-button:focus-visible .button__like{
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .heart {
@@ -218,37 +227,41 @@
 
 .button__like-text {
   font-family: var(--font-accent);
-  font-size: clamp(12px, 1.2vw, 14px);
-  padding-top: clamp(10px, 2vh, 12.5px);
-  padding-left: clamp(25px, 5vw, 37px);
+  place-content: center;
+  font-size: 14px;
+  padding-inline-start: 37px;
 }
 
 .button-save {
-  all: unset;
   display: flex;
-  flex-direction: row;
-  justify-self: center;
-  margin-block-start: clamp(40px, 8vh, 52px);
-  margin-inline: auto;
-  margin-block-end: clamp(60px, 10vh, 100px);
-  inline-size: clamp(306px, 85vw, 335px);
+  flex-direction: column;
+  margin-block-start: 52px;
+  margin-block-end: 100px;
+  margin-inline: 35px;
+  block-size: 84px;
+  inline-size: 306px;
   border: 2px solid var(--main-border-color);
   background-color: var(--background-color);
   align-items: center;
+  padding: 0;
 }
 
 .button__icon {
-  align-self: center;
-  padding-block-start: clamp(10px, 3vh, 15px);
-  padding-block-end: clamp(6px, 2vh, 8px);
-  padding-inline-start: clamp(12px, 3vw, 19px);
+  margin: 0;
+  padding: 0;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .button__save-text {
   font-family: var(--font-accent);
-  font-size: clamp(12px, 1.2vw, 14px);
-  padding-inline-start: clamp(6px, 2vw, 8px);
-  padding-block-end: clamp(10px, 2vh, 15px);
+  font-size: 14px;
+  text-align: left;
 }
 
 .dialog::backdrop {
@@ -257,10 +270,10 @@
 
 .dialog {
   border: 2px solid var(--main-border-color);
-  padding: clamp(20px, 5vw, 40px) clamp(10px, 5vw, 20px);
   background-color: #fff;
-  inline-size: clamp(321px, 90vw, 353px);
+  inline-size: 341px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 0;
 }
 
 .dialog[open] {
@@ -276,59 +289,52 @@
   flex-direction: column;
   align-items: center;
   text-align: left;
+  inline-size: 257px;
+  padding-block-start: 30px;
 }
 
 .floopy__text {
   display: flex;
-  margin-bottom: clamp(20px, 4vh, 30px);
-  inline-size: clamp(250px, 80vw, 293px);
+  margin-bottom: 30px;
+  inline-size: 257px;
 }
 
 .dialog__icon {
-  color: var(--accent-color, #000);
   flex-shrink: 0;
-  width: 39px;
-  height: 39px;
-  align-self: center;
+  inline-size: 39px;
 }
 
 .dialog__text {
   text-transform: uppercase;
-  font-size: clamp(12px, 1.2vw, 14px);
+  margin-inline-start: 20px;
+  font-size: 14px;
   line-height: 150%;
-  padding-inline-start: clamp(12px, 4vw, 20px);
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent);
 }
 
 .dialog__button {
   border: 2px solid var(--main-border-color);
-  padding: clamp(10px, 2vh, 12.5px) clamp(40px, 8vw, 114.5px);
-  font-family: var(--font-accent, sans-serif);
+  font-family: var(--font-accent);
   text-transform: uppercase;
   cursor: pointer;
   background: transparent;
-  color: black;
-  inline-size: clamp(250px, 80vw, 293px);
+  inline-size: 257px;
+  block-size: 38px;
+  margin-block-end: 30px;
 }
 
-.button__like,
-.button-save,
-.dialog__button {
+.decorations {
   transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.button__like:focus,
-.button-save:focus,
-.dialog__button:focus {
+.decorations:focus{
   outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.button__like::before,
-.button-save::before,
-.dialog__button::before {
+.decorations::before{
   content: "";
   position: absolute;
   inset: 0;
@@ -338,54 +344,68 @@
   z-index: 0;
 }
 
-.button__like:hover::before,
-.button-save:hover::before,
-.dialog__button:hover::before {
+.decorations:hover::before {
   transform: translateX(0);
 }
 
-.button__like span,
-.button-save span,
-.dialog__button span {
+.decorations span {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--button-text-color, #fff);
 }
 
-@media (width >= 376px) {
-  .header {
-    inline-size: 700px;
-    margin-inline-start: 370px;
-  }
 
+@media (width >= 376px) {
+
+  .header {
+    block-size: 364px;
+  }
+  
   .main {
-    inline-size: 696px;
-    margin-inline-start: 370px;
+    margin-block-start: 102px;
+    display: grid;
+    place-content: center;
   }
 
   .images {
-    width: 696px;
-    height: 696px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .label {
+    top: 27px;
+    right: 25px;
   }
 
   .content {
-    inline-size: 646px;
+    padding-inline: 25px;
+    padding-block-start: 27px;
+    inline-size: 100%;
+  }
+
+  .section__post {
+    min-block-size: 224px;
   }
 
   .button-save {
     flex-direction: row;
     inline-size: 335px;
-    align-items: center;
+    margin-inline: auto;
+    block-size: 51px;
   }
 
   .button__icon {
-    padding-inline-start: 19px;
+    margin-inline-start: 19px;
+    margin-block-end: 15px;
+    margin-block-start: 15px;
+    width: 21px;
+    height: 21px;
   }
   
   .button__save-text {
     padding-block: 18.5px;
-    padding-inline-start: 8px;
+    margin-inline-start: 8px;
   }
 
   .dialog {
