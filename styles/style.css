@@ -31,12 +31,13 @@
   margin-block-start: 100px;
   inline-size: clamp(375px, 90vw, 696px);
   margin-inline: auto;
-  block-size: 327px;
   border: 2px solid var(--main-border-color);
 }
 
 .logo__group {
   font-family: var(--font-accent);
+  padding-block-start: 120px;
+  padding-block-end: 120px;
 }
 
 .header__title {
@@ -47,7 +48,7 @@
 .header__subtitle {
   justify-self: center;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-block-start: clamp(14px, 3vh, 120px);
+  margin-block-start: 20px;
   text-transform: uppercase;
 }
 
@@ -159,24 +160,23 @@
   max-inline-size: 100%;
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding-inline: 25px;
+  padding-block-start: 21px;
+}
+
 .paragraph__content {
   font-size: 18px;
   inline-size: auto;
   line-height: 21px;
-  padding-inline: 25px;
-}
-
-.subtitle {
-  padding-block-start: 20px;
-}
-
-.comments {
-  padding-block-start: 27px;
 }
 
 .card__like-buttons {
   display: flex;
-  gap: 12px;
+  gap: 4px;
   margin-block: 25px;
   justify-self: end;
   margin-inline-end: 25px;
@@ -203,10 +203,7 @@
 .card__like-button {
   min-block-size: 38px;
   min-inline-size: 130px;
-  padding: 0;
 }
-
-
 
 .like-icon {
   display: block;
@@ -217,11 +214,10 @@
   --animation-fill-color: #FF0000;
 }
 
-.button__like-text {
+.button__text {
+  inline-size: 100%;
   font-family: var(--font-accent);
   font-size: 14px;
-  place-content: center;
-  padding-inline-start: 37px;
 }
 
 .heart {
@@ -363,10 +359,14 @@
 @media (width >= 376px) {
 
   .header {
-    block-size: 368px;
-    margin-block-start: 130px;
+    margin-block-start: 100px;
   }
   
+  .logo__group {
+    padding-block-start: 128px;
+    padding-block-end: 128px;
+  }
+
   .main {
     margin-block-start: 102px;
     display: grid;
@@ -378,8 +378,6 @@
   }
 
   .content {
-    padding-inline: 25px;
-    padding-block-start: 26px;
     inline-size: 100%;
   }
   
@@ -389,18 +387,16 @@
     line-height: 21px;
   }
   
-  .subtitle {
-    padding: 0;
-  }
-  
   .comments {
-    padding: 0;
     padding-block-start: 27px;
+    padding-inline-start: 25px;
+    padding-block-end: 25px;
   }
 
   .card__like-buttons {
     margin: 0;
-    margin-block: 25px;
+    padding-inline-end: 25px;
+    padding-block-end: 25px;
   }
 
   .images {
@@ -414,7 +410,6 @@
   }
 
   .section__post {
-    min-block-size: 224px;
     margin-block-start: 52px;
   }
 

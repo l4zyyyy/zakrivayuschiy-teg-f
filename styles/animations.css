@@ -33,33 +33,33 @@
   fill: transparent;
 }
 
-.like-icon-button:hover .core {
+.card__icon-button:hover .core {
   transition-delay: 0s;
   fill: currentColor;
 }
 
-.like-icon-button:hover .main-body {
+.card__icon-button:hover .main-body {
   transition-delay: 0.05s;
   fill: currentColor;
 }
 
-.like-icon-button:not(:hover) .core {
+.card__icon-button:not(:hover) .core {
   transition-delay: 0.03s;
   fill: transparent;
 }
 
-.like-icon-button:not(:hover) .main-body {
+.card__icon-button:not(:hover) .main-body {
   transition-delay: 0s;
   fill: transparent;
 }
 
-.like-icon-button:active .core {
+.card__icon-button:active .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3s;
   transition-delay: 0s;
 }
 
-.like-icon-button:active .main-body {
+.card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s;
   transition-delay: 0.05s;
